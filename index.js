@@ -26,7 +26,7 @@ const RazorPay=require("razorpay");
 
 const paymentController=require("./controllers/paymentController.js");
 
-const path=require("path");
+// const path=require("path");
 
 
 
@@ -150,13 +150,13 @@ app.get("",(req,res)=>{
     console.log("hello sougata");
 })
 
-app.use(express.static(path.join(__dirname,'./my-app/build')))
+// app.use(express.static(path.join(__dirname,'./my-app/build')))
 
-app.get('*',function(_,res){
-    res.sendFile(path.join(__dirname,"./my-app/build/index.html"),function(err){
-      res.status(500).send(err)
-    })
-})
+// app.get('*',function(_,res){
+//     res.sendFile(path.join(__dirname,"./my-app/build/index.html"),function(err){
+//       res.status(500).send(err)
+//     })
+// })
 
 const PORT=process.env.PORT || 8000;
 http.listen(9000,()=>{
